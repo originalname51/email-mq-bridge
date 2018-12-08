@@ -23,13 +23,7 @@ java-mail-properties:
   java-mail-properties:
     mail.imap.socketFactory.class: "javax.net.ssl.SSLSocketFactory"  
 
-
-The following property will have no effect and is a hold-over from a polling solution. If you are interested in a polling solution look through the history of EmailFlow. Changing this property has no effect on the program.
-email.pollTimeInSeconds: 5
-
-To run type mvn spring-boot:run in command line. You can also install the program, pick the jar out, put the jar in the same folder as the application.yml file (or in a classpath as described in the spring documentation) and then run by typing: 
-
-`java -jar .\email-to-queue-0.0.1-SNAPSHOT.jar`
+To run run a mvn install to get the war. Put the application.yml in the /bin folder and deploy the application to the server.
 
 Please note, there is a current bug with Spring 2.0.x and so this project uses Spring 1.5.x. The bug can be found here:
 https://jira.spring.io/browse/INT-4299. When the bug is fixed the project should be tested to migrate to the newer version of spring.
